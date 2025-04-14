@@ -1,0 +1,61 @@
+:root {
+ --primary-color: #fdb913;
+ --secondary-color: #2b2b2b;
+ --primary-text-color: #3a3a3a;
+ --secondary-text-color: #ffffff;
+ --highlight-color: #f1c40f;
+ --thanks-color: #1e73be;
+ --footer-address-color:#858585;
+ color: var(--primary-text-color);
+}
+
+header {
+    background: var(--primary-color);
+}
+
+.gioi-thieu {
+    background: var(--secondary-color);
+    color: var(--secondary-text-color);
+}
+
+article {
+    background: var(--primary-color);
+}
+.khau-hieu,.muc-tieu{
+    text-align: center;
+    background: var(--highlight-color);
+    color: var(--secondary-text-color);
+}
+
+.muc-tieu {
+    background-image: url('./sea-water-wallpaper.png');
+}
+
+.dich-vu h1{
+    background: var(--highlight-color);
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
+.dich-vu li {
+    text-align: center;
+}
+.dich-vu li::marker {
+    content: '';
+}
+.dich-vu a{
+    color: #1e73be;
+    font-style: italic;
+    text-decoration: none;
+}
+.dich-vu a:hover {
+    color: inherit;
+}
+
+.ten-cong-ty::after {
+    content: "CÔNG TY TNHH SOS EXPRESS VIỆT NAM";
+}
+
+footer {
+    background: var(--secondary-color);
+}
