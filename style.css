@@ -1,61 +1,142 @@
 :root {
- --primary-color: #fdb913;
- --secondary-color: #2b2b2b;
- --primary-text-color: #3a3a3a;
- --secondary-text-color: #ffffff;
- --highlight-color: #f1c40f;
- --thanks-color: #1e73be;
- --footer-address-color:#858585;
- color: var(--primary-text-color);
+  --primary-color: #fdb913;
+  --secondary-color: #2b2b2b;
+  --primary-text-color: #3a3a3a;
+  --secondary-text-color: #ffffff;
+  --highlight-color: #f1c40f;
+  --thanks-color: #1e73be;
+  --footer-address-color: #858585;
+  --blue: #1e73be;
+  color: var(--primary-text-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+p {
+  margin-bottom: 16px;
 }
 
 header {
-    background: var(--primary-color);
+  background: var(--primary-color);
+}
+
+.logo {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+header nav {
+  display: flex;
+  flex-flow: wrap;
+}
+
+header nav a {
+  text-decoration: unset;
+  color: var(--primary-text-color);
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+  flex: 1;
+}
+
+header nav a:hover {
+  background-color: var(--secondary-color);
+  color: var(--secondary-text-color);
 }
 
 .gioi-thieu {
-    background: var(--secondary-color);
-    color: var(--secondary-text-color);
+  background: var(--secondary-color);
+  color: var(--secondary-text-color);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gioi-thieu img {
+  margin-bottom: 16px;
+}
+
+.khau-hieu-img {
+  padding-inline: 40px;
+}
+
+.gioi-thieu img,
+.khau-hieu-img img {
+  width: 100%;
+  max-width: 820px;
 }
 
 article {
-    background: var(--primary-color);
+  background: var(--primary-color);
+  padding: 40px;
 }
-.khau-hieu,.muc-tieu{
-    text-align: center;
-    background: var(--highlight-color);
-    color: var(--secondary-text-color);
+.khau-hieu,
+.khau-hieu-img,
+.muc-tieu {
+  text-align: center;
+  background: var(--highlight-color);
+  color: var(--secondary-text-color);
 }
 
 .muc-tieu {
-    background-image: url('./sea-water-wallpaper.png');
+  background-image: url('./assets/sea-water-wallpaper.png');
 }
 
-.dich-vu h1{
-    background: var(--highlight-color);
-    color: var(--primary-text-color);
-    text-align: center;
+blockquote {
+  border-left: 5px solid rgba(0, 0, 0, .05);
+  padding: 16px;
+  margin: 0;
+}
+
+.dich-vu:has(h1) {
+  background: var(--highlight-color);
+  color: var(--primary-text-color);
+  text-align: center;
+}
+
+.dich-vu:has(blockquote) {
+  padding: 10px 30px;
 }
 
 .dich-vu li {
-    text-align: center;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.dich-vu li:last-child {
+  padding-bottom: 0;
 }
 .dich-vu li::marker {
-    content: '';
+  content: '';
 }
-.dich-vu a{
-    color: #1e73be;
-    font-style: italic;
-    text-decoration: none;
+.dich-vu a {
+  color: #1e73be;
+  font-style: italic;
+  text-decoration: none;
 }
 .dich-vu a:hover {
-    color: inherit;
+  color: inherit;
+}
+
+.thankgiving h1 {
+  margin-bottom: 14px;
+}
+
+.thankgiving {
+  background-color: var(--blue);
+  color: var(--secondary-text-color);
+  text-align: center;
 }
 
 .ten-cong-ty::after {
-    content: "CÔNG TY TNHH SOS EXPRESS VIỆT NAM";
+  content: "CÔNG TY TNHH SOS EXPRESS VIỆT NAM";
 }
 
 footer {
-    background: var(--secondary-color);
+  background: var(--secondary-color);
 }
