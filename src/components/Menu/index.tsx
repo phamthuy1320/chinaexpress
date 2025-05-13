@@ -10,7 +10,7 @@ export interface IMenuProps {
   }[];
 }
 
-export const Menu = (props: IMenuProps) => {
+export const Menu = (props?: IMenuProps) => {
   const { isOpen, onClose, onToggle } = useDisclosure();
   const btnRef = useRef<HTMLButtonElement>(null);
   return (
